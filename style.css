@@ -10,7 +10,7 @@
 
     --bg-color: #000;
     --bg-table-th: #092D38;
-    --bg-table-secondary: #06161B80;
+    --bg-table-secondary: rgba(6, 22, 27, 0.50);
     --bg-table-primary: #06181C;
     --bg-table-border: #4A808C;
 
@@ -137,29 +137,28 @@ table th {
     top: 0;
 }
 
-.wrapper-table {
+table tbody {
     overflow-y: auto;
-    height: 60vh;
+    max-height: 63vh;
 } 
-
-.wrapper-table::-webkit-scrollbar-button:end:increment,
-.wrapper-table::-webkit-scrollbar-button:end:decrement {
+table tbody::-webkit-scrollbar-button:end:increment,
+table tbody::-webkit-scrollbar-button:end:decrement {
     display: none;
 }
 
-.wrapper-table::-webkit-scrollbar {
+table tbody::-webkit-scrollbar {
     width: 6px;
     height: 20px;
     background-color: transparent;
     border-radius: 1.5rem;
 }
 
-.wrapper-table::-webkit-scrollbar-track {
+table tbody::-webkit-scrollbar-track {
     background-color: transparent;
     border-radius: 1.5rem;
 }
 
-.wrapper-table::-webkit-scrollbar-thumb {
+table tbody::-webkit-scrollbar-thumb {
     background-color: var(--bg-table-border);
     border-radius: 1.5rem;
     height: 20px;
@@ -214,4 +213,27 @@ td .remove {
     background: none;
     border: none;
     color: var(--txt-buttom-remove);
+}
+
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    height: 55rem;
+    color: var(--txt-color-emptyState);
+}
+
+.empty-state img {
+    width: 13.2rem;
+    height: 12.5rem;
+}
+
+.empty-state h2 {
+    font-size: 4rem;
+    line-height: 62%%;
+}
+
+.empty-state.hide {
+    display: none;
 }

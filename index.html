@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitFav</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="./js/main.js" defer></script>
 </head>
 <body>
     <div id="app">
@@ -30,101 +31,17 @@
                 <thead>
                     <tr>
                         <th>Usuário</th>
-                        <th>Repositórios</th>
-                        <th>Seguidores</th>
+                        <th>Repositories</th>
+                        <th>Followers</th>
                         <th>Ação</th>
                     </tr>
                 </thead>
-                <div class="wrapper-tbody">
-                    <tbody>
-                        <tr>
-                            <td class="user">
-                                <img src="https://github.com/Gisellebm.png" alt="">
-                                <a href="https://github.com/Gisellebm" target="_blank">
-                                    <p>Giselle Macedo</p>
-                                    <span>gisellebm</span>
-                                </a>
-                            </td>
-                            <td class="repositories">110</td>
-                            <td class="followers">62</td>
-                            <td>
-                                <button class="remove">Remover</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="user">
-                                <img src="https://github.com/Gisellebm.png" alt="">
-                                <a href="https://github.com/Gisellebm" target="_blank">
-                                    <p>Giselle Macedo</p>
-                                    <span>gisellebm</span>
-                                </a>
-                            </td>
-                            <td class="repositories">110</td>
-                            <td class="followers">62</td>
-                            <td>
-                                <button class="remove">Remover</button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="user">
-                                <img src="https://github.com/Gisellebm.png" alt="">
-                                <a href="https://github.com/Gisellebm" target="_blank">
-                                    <p>Giselle Macedo</p>
-                                    <span>gisellebm</span>
-                                </a>
-                            </td>
-                            <td class="repositories">110</td>
-                            <td class="followers">62</td>
-                            <td>
-                                <button class="remove">Remover</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="user">
-                                <img src="https://github.com/Gisellebm.png" alt="">
-                                <a href="https://github.com/Gisellebm" target="_blank">
-                                    <p>Giselle Macedo</p>
-                                    <span>gisellebm</span>
-                                </a>
-                            </td>
-                            <td class="repositories">110</td>
-                            <td class="followers">62</td>
-                            <td>
-                                <button class="remove">Remover</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="user">
-                                <img src="https://github.com/Gisellebm.png" alt="">
-                                <a href="https://github.com/Gisellebm" target="_blank">
-                                    <p>Giselle Macedo</p>
-                                    <span>gisellebm</span>
-                                </a>
-                            </td>
-                            <td class="repositories">110</td>
-                            <td class="followers">62</td>
-                            <td>
-                                <button class="remove">Remover</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="user">
-                                <img src="https://github.com/Gisellebm.png" alt="">
-                                <a href="https://github.com/Gisellebm" target="_blank">
-                                    <p>Giselle Macedo</p>
-                                    <span>gisellebm</span>
-                                </a>
-                            </td>
-                            <td class="repositories">110</td>
-                            <td class="followers">62</td>
-                            <td>
-                                <button class="remove">Remover</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </div>
-            </table>            
+                <tbody></tbody>
+            </table> 
+            <div class="empty-state hide">
+                <img src="./assets/Estrela1.svg" alt="Logo">
+                <h2>Nenhum favorito ainda</h2>
+            </div>           
         </div>
     </div>
     
