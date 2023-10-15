@@ -60,7 +60,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <br/>
 
 ## 💻 Deploy 
-- https://gisellebm.github.io/GitFav-v2/
+- https://gisellebm.github.io/Desafio_GitFav/
 
 <br/>
 
