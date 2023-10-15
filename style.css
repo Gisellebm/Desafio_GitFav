@@ -37,7 +37,7 @@
 
 body {
     background-color: var(--bg-color);
-    padding: 11.5rem 3rem;
+    padding: 10.5rem 4rem 6.7rem;
 }
 
 body * {
@@ -65,7 +65,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 8.7rem;
+    margin-bottom: 5.7rem;
 }
 
 .search {
@@ -119,6 +119,33 @@ header {
     width: 100%;
 }
 
+
+.wrapper-table {
+    overflow-y: auto;
+    max-height: 62vh;
+}
+
+
+.wrapper-table::-webkit-scrollbar-button:end:increment,
+.wrapper-table::-webkit-scrollbar-button:end:decrement {
+    display: none;
+}
+
+.wrapper-table::-webkit-scrollbar {
+    width: 1rem;
+    background-color: transparent;
+}
+
+.wrapper-table::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin-block-start: 5.4rem;   
+}
+
+.wrapper-table::-webkit-scrollbar-thumb {
+    background-color: var(--bg-table-border);
+    border-radius: 1.5rem;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -136,34 +163,6 @@ table th {
     position: sticky;
     top: 0;
 }
-
-table tbody {
-    overflow-y: auto;
-    max-height: 63vh;
-} 
-table tbody::-webkit-scrollbar-button:end:increment,
-table tbody::-webkit-scrollbar-button:end:decrement {
-    display: none;
-}
-
-table tbody::-webkit-scrollbar {
-    width: 6px;
-    height: 20px;
-    background-color: transparent;
-    border-radius: 1.5rem;
-}
-
-table tbody::-webkit-scrollbar-track {
-    background-color: transparent;
-    border-radius: 1.5rem;
-}
-
-table tbody::-webkit-scrollbar-thumb {
-    background-color: var(--bg-table-border);
-    border-radius: 1.5rem;
-    height: 20px;
-}
-
 
 table td {
     padding: 2.4rem 2.4rem 2.4rem 4rem;
@@ -220,7 +219,7 @@ td .remove {
     align-items: center;
     justify-content: center;
     gap: 6rem;
-    height: 55rem;
+    min-height: 52vh;
     color: var(--txt-color-emptyState);
 }
 
@@ -231,9 +230,9 @@ td .remove {
 
 .empty-state h2 {
     font-size: 4rem;
-    line-height: 62%%;
+    line-height: 62%;
 }
 
-.empty-state.hide {
+.empty-state.hidden {
     display: none;
 }

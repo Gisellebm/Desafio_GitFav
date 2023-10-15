@@ -5,6 +5,7 @@ import { GithubUser } from "./GithubUser.js";
 export class favorites {
     constructor(root) {
         this.root = document.querySelector(root);
+        this.divEmpty = this.root.querySelector('div .empty-state');
         this.load();
     }
     
@@ -26,7 +27,6 @@ export class favorites {
 
 
             const user = await GithubUser.search(username);
-            console.log(user);
             if(user.login === undefined) {
                 throw new Error('Usuário não encontrado!')
             }
@@ -45,6 +45,7 @@ export class favorites {
 
         this.update();
         this.save();
+        this.emptyState();
     }
 }
 
@@ -62,9 +63,9 @@ export class favoritesView extends favorites {
     onadd() {
         const addButton = this.root.querySelector('.search button');
         addButton.onclick = () => {
-            const { value } = this.root.querySelector('.search input');
-            console.log(value);
-            this.add(value);
+            const input = this.root.querySelector('.search input');
+            this.add(input.value);
+            input.value = '';
         }
     }
 
@@ -83,14 +84,25 @@ export class favoritesView extends favorites {
             row.querySelector('.repositories').textContent = user.public_repos;
             row.querySelector('.followers').textContent = user.followers;
             row.querySelector('.remove').onclick = () => { //como só vou usar um único evento neste botão, vou usar o 'onclick'
-                const isOk = confirm(`Deseja realmente excluir o(a) ${user.name}?`); 
+                const isOk = confirm(`Deseja realmente excluir ${user.name}?`); 
                 if(isOk) {
                     this.delete(user)
                 }
             }
 
             this.tbody.append(row);
+            this.emptyState();
         })
+    }
+
+    emptyState() {
+        if (this.entries.lenght === 0) {
+            this.divEmpty.classList.remove('hidden');
+            console.log(this.divEmpty);
+        } else {
+            this.divEmpty.classList.add('hidden');
+            console.log(this.divEmpty);
+        }
     }
     
     createRow () {
@@ -98,14 +110,14 @@ export class favoritesView extends favorites {
 
         tr.innerHTML = `
             <td class="user">
-                <img src="https://github.com/Gisellebm.png" alt="">
-                <a href="https://github.com/Gisellebm" target="_blank">
-                    <p>Giselle Macedo</p>
-                    <span>gisellebm</span>
+                <img src="https://github.com/user.login.png" alt="user.name">
+                <a href="https://github.com/user.login" target="_blank">
+                    <p>user.name</p>
+                    <span>user.login</span>
                 </a>
             </td>
-            <td class="repositories">110</td>
-            <td class="followers">62</td>
+            <td class="repositories">00</td>
+            <td class="followers">00</td>
             <td>
                 <button class="remove">Remover</button>
             </td>  
