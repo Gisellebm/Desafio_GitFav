@@ -1,6 +1,6 @@
 # GIT FAV
 
-### Projeto Desenvolvido como Desafio do Stage 06 / Módulo 02 do curso Explorer da Rocketseat.
+### Projeto Desenvolvido como Desafio do Stage 06 / Módulo 02 do Curso Explorer da Rocketseat.
 
 <br/>
 
